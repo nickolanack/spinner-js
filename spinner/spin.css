@@ -10,8 +10,8 @@
 }
 
 .sp-c1 > div, .sp-c2 > div, .sp-c3 > div {
-  width: 6px;
-  height: 6px;
+  width: 20%;
+  height: 20%;	
   background-color: #333;
 
   border-radius: 100%;

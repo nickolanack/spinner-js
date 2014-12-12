@@ -8,7 +8,8 @@ var Spinner=new Class({
 		me.options=Object.append({
 			start:true,
 			width:32,
-			height:32
+			height:32,
+			color:black
 		},options);
 		if(me.options.start){
 			me.start();
@@ -28,27 +29,42 @@ var Spinner=new Class({
 	},
 	
 	_render:function(){
+		var me=this;
+		var circle={
+				'background-color':me.options.color
+		};
+		
 		
 	    var s=new Element('div',{'class':'sp'});
+	    
+	    var size=me.element.getSize();
+	    s.setStyles({
+	    	position:'absolute',
+	    	width:me.options.width+"px",
+	    	height:me.options.height+"px",
+	    	top:((size.y-me.options.height)/2)+"px",
+	    	left:((size.x-me.options.width)/2)+"px"
+	    });
+	    
 	    var sc1=s.appendChild(new Element('div',{'class':'sp-c sp-c1'}));
-	    sc1.appendChild(new Element('div',{'class':'c1'}));
-	    sc1.appendChild(new Element('div',{'class':'c2'}));
-	    sc1.appendChild(new Element('div',{'class':'c3'}));
-	    sc1.appendChild(new Element('div',{'class':'c4'}));
+	    sc1.appendChild(new Element('div',{'class':'c1', styles:circle}));
+	    sc1.appendChild(new Element('div',{'class':'c2', styles:circle}));
+	    sc1.appendChild(new Element('div',{'class':'c3', styles:circle}));
+	    sc1.appendChild(new Element('div',{'class':'c4', styles:circle}));
 	    
 	    
 	    var sc2=s.appendChild(new Element('div',{'class':'sp-c sp-c2'}));
-	    sc2.appendChild(new Element('div',{'class':'c1'}));
-	    sc2.appendChild(new Element('div',{'class':'c2'}));
-	    sc2.appendChild(new Element('div',{'class':'c3'}));
-	    sc2.appendChild(new Element('div',{'class':'c4'}));
+	    sc2.appendChild(new Element('div',{'class':'c1', styles:circle}));
+	    sc2.appendChild(new Element('div',{'class':'c2', styles:circle}));
+	    sc2.appendChild(new Element('div',{'class':'c3', styles:circle}));
+	    sc2.appendChild(new Element('div',{'class':'c4', styles:circle}));
 	    
 	    
 	    var sc3=s.appendChild(new Element('div',{'class':'sp-c sp-c3'}));
-	    sc3.appendChild(new Element('div',{'class':'c1'}));
-	    sc3.appendChild(new Element('div',{'class':'c2'}));
-	    sc3.appendChild(new Element('div',{'class':'c3'}));
-	    sc3.appendChild(new Element('div',{'class':'c4'}));
+	    sc3.appendChild(new Element('div',{'class':'c1', styles:circle}));
+	    sc3.appendChild(new Element('div',{'class':'c2', styles:circle}));
+	    sc3.appendChild(new Element('div',{'class':'c3', styles:circle}));
+	    sc3.appendChild(new Element('div',{'class':'c4', styles:circle}));
 	    
 	    return s;
 
