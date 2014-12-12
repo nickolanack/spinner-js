@@ -1,4 +1,4 @@
-var UISpinner=new Class({
+var Spinner=new Class({
 	
 
 	initialize:function(element, options){
