@@ -9,7 +9,7 @@ var Spinner=new Class({
 			start:true,
 			width:32,
 			height:32,
-			color:black
+			color:'black'
 		},options);
 		if(me.options.start){
 			me.start();
@@ -37,13 +37,13 @@ var Spinner=new Class({
 		
 	    var s=new Element('div',{'class':'sp'});
 	    
-	    var size=me.element.getSize();
+	   // var size=me.element.getSize();
 	    s.setStyles({
 	    	position:'absolute',
 	    	width:me.options.width+"px",
 	    	height:me.options.height+"px",
-	    	top:((size.y-me.options.height)/2)+"px",
-	    	left:((size.x-me.options.width)/2)+"px"
+	    	top:"calc( 50% - "+(me.options.height/2)+"px )",
+	    	left:"calc( 50% - "+(me.options.width/2)+"px )"
 	    });
 	    
 	    var sc1=s.appendChild(new Element('div',{'class':'sp-c sp-c1'}));
