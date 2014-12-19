@@ -59,13 +59,7 @@ var Spinner=new Class({
 	    sc2.appendChild(new Element('div',{'class':'c3', styles:circle}));
 	    sc2.appendChild(new Element('div',{'class':'c4', styles:circle}));
 	    
-	    
-	    var sc3=s.appendChild(new Element('div',{'class':'sp-c sp-c3'}));
-	    sc3.appendChild(new Element('div',{'class':'c1', styles:circle}));
-	    sc3.appendChild(new Element('div',{'class':'c2', styles:circle}));
-	    sc3.appendChild(new Element('div',{'class':'c3', styles:circle}));
-	    sc3.appendChild(new Element('div',{'class':'c4', styles:circle}));
-	    
+
 	    return s;
 
 	}
